@@ -2,7 +2,7 @@
 //Class: CS 172
 //Homework: #1
 //Due Date: 9/20/16
-//Exercises 01_01-01_04
+//Exercises 01_01 through 01_04
 
 #include<iostream>
 #include<string>
@@ -12,6 +12,7 @@ using namespace std;
 //ex02 void function with no inputs 
 void ex02()
 {
+	cout << "Ex02 content: " << endl;
 	//a) declare hasPassedTest, and initialize it to true
 	bool hasPassedTest = true;
 	//b) Declare x and y as two random numbers, then output which is larger
@@ -85,6 +86,7 @@ void ex02()
 //ex03 void function with no inputs
 void ex03()
 {
+	cout << "Ex03 content: " << endl;
 	//a)Prompts user for area of square and outputs diagonal for that square
 	//Declaring variables, and getting length of square
 	cout << "Enter the area of a square: " << endl;
@@ -145,6 +147,7 @@ void addOne(int& i)
 //Void function ex04 with no inputs
 void ex04()
 {
+	cout << "Ex04 content: " << endl;
 	//a)Ask a user for input between 1 and 10, loop until correct value is entered
 	//Declaring user entry variable
 	int userEntry = 0;
@@ -211,6 +214,7 @@ void ex04()
 //void function to display all elements of an array, input array, size of array, no output
 void arrayDisplay( int exarray[], int exArraySize)
 {
+	cout << "The integers entered were: ";
 	for (int i = 0; i < exArraySize; i++)
 	{
 		cout << exarray[i] << " ";
@@ -223,6 +227,7 @@ void arrayLocate(int exArray[], int exArraySize)
 	//Prompting user to enter value to locate
 	cout << "Enter integer value to determine if array contains: " << endl;
 	int locate = 0;
+	int yes = 0;
 	cin >> locate;
 	int counter = 0, endCount = exArraySize;
 	//While loop to determine if the number is contained in the array
@@ -232,11 +237,12 @@ void arrayLocate(int exArray[], int exArraySize)
 		if (testAgainst == locate)
 		{
 			cout << "The value is in the array" << endl;
+			yes = 1;
 		}
-		else
-		{
-			cout << "The value is not in the array" << endl;
-		}
+	}
+	if (yes == 0)
+	{
+		cout << "The value is not in the array" << endl;
 	}
 }
 
@@ -244,8 +250,9 @@ void arrayLocate(int exArray[], int exArraySize)
 //void function ex05 with no inputs and no returned values
 void ex05()
 {
+	cout << "Ex05 content: " << endl;
 	//a) Loop to ask for five integers from user and store in array
-	const int LIMIT = 4;
+	const int LIMIT =10;
 	int intArray[LIMIT];
 	int counter = 0, countEnd = 5;
 	while (counter < countEnd)
